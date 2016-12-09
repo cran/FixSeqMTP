@@ -1,6 +1,6 @@
 #' FixSeqMTP : Tools for Fixed Sequence Multiple Testing Procedures
 #'
-#' The FixSeqMTP package provides two categories of functions for generalized fixed sequence mutliple hypothese testing:
+#' The FixSeqMTP package provides two categories of functions for generalized fixed sequence mutliple testing procedures:
 #'@section FWER controlling procedures:
 #'
 #'    \code{\link{FSFWER.arbidept.p.adjust}} and  \code{\link{FSFWER.arbidept.cv}}

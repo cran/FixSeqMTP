@@ -6,7 +6,7 @@
 \alias{FixSeqMTP-package}
 \title{FixSeqMTP : Tools for Fixed Sequence Multiple Testing Procedures}
 \description{
-The FixSeqMTP package provides two categories of functions for generalized fixed sequence mutliple hypothese testing:
+The FixSeqMTP package provides two categories of functions for generalized fixed sequence mutliple testing procedures:
 }
 \section{FWER controlling procedures}{
 
