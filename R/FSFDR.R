@@ -144,7 +144,7 @@ FSFDR.arbidept.p.adjust <- function(p, alpha=0.05, k=1, tol = 1e-6, make.decisio
     opt.adjp[j] <- bisection.FDR(optim.arbidept.adjp, p=p, k=k, j=j, tol=tol, a = 0, b = 1)
   }
   if (make.decision==TRUE){
-    return(data.frame(p.value = p, adjust.p.value=opt.adjp, decision=ifelse(opt.adjp<=alpha, "reject","accept")))
+    return(data.frame(raw.p = p, adjust.p=opt.adjp, decision=ifelse(opt.adjp<=alpha, "reject","accept")))
   } else{return(opt.adjp)}
 }
 
@@ -197,7 +197,7 @@ FSFDR.arbidept.cv <- function(p, k=1, alpha = 0.05, make.decision = TRUE){
     decision[i:m] <- "accept"
   }
   if (make.decision==TRUE){
-    return(data.frame(p.value = p, critical.value=cv, decision))
+    return(data.frame(raw.p = p, critical.value=cv, decision))
   } else{return(cv)}
 }
 
@@ -242,7 +242,7 @@ FSFDR.indept.p.adjust <- function(p, alpha=0.05, k=1, tol = 1e-6, make.decision 
     opt.adjp[j] <- bisection.FDR(optim.indept.adjp, p=p, k=k, j=j, tol=tol, a = 0, b = 1)
   }
   if (make.decision==TRUE){
-    return(data.frame(p.value = p, adjust.p.value=opt.adjp, decision=ifelse(opt.adjp<=alpha, "reject","accept")))
+    return(data.frame(raw.p = p, adjust.p=opt.adjp, decision=ifelse(opt.adjp<=alpha, "reject","accept")))
   } else{return(opt.adjp)}
 }
 
@@ -298,7 +298,7 @@ FSFDR.indept.cv <- function(p, k=1, alpha = 0.05, tol = 1e-6, make.decision = TR
     decision[i:m] <- "accept"
   }
   if (make.decision==TRUE){
-    return(data.frame(p.value = p, critical.value=cv, decision))
+    return(data.frame(raw.p = p, critical.value=cv, decision))
   } else{return(cv)}
 }
 

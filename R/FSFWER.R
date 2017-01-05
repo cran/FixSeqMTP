@@ -175,7 +175,7 @@ FSFWER.arbidept.p.adjust <- function(p, alpha=0.05, beta=0.5, tol = 1e-6, method
                           both = bisection.FWER(optim.both.adjp, p=p, j=j, beta=beta, tol=tol, a = 0, b = 1))
   }
   if (make.decision==TRUE){
-    return(data.frame(p.value = p, adjust.p.value=opt.adjp, decision=ifelse(opt.adjp<=alpha, "reject","accept")))
+    return(data.frame(raw.p = p, adjust.p=opt.adjp, decision=ifelse(opt.adjp<=alpha, "reject","accept")))
   } else{return(opt.adjp)}
 }
 
@@ -228,7 +228,7 @@ FSFWER.arbidept.cv <- function(p, alpha=0.05, beta=0.5, tol = 1e-6, method = c("
   else{s <- s+1}
   }
   if (make.decision==TRUE){
-    return(data.frame(p.value = p, critical.value=cv, decision=ifelse(p<=cv, "reject","accept")))
+    return(data.frame(raw.p = p, critical.value=cv, decision=ifelse(p<=cv, "reject","accept")))
   } else{return(cv)}
 }
 
